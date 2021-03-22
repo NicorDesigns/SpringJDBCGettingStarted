@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS charitydb;
+CREATE DATABASE charitydb;
