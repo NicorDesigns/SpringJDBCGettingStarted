@@ -1,4 +1,4 @@
-package com.nicordesigns.JDBC2;
+package com.nicordesigns;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
