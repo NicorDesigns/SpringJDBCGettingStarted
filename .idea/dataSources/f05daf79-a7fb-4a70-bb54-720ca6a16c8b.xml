@@ -1,8 +1,256 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="root@localhost">
-  <database-model serializer="dbm" dbms="MARIADB" family-id="MARIADB" format-version="4.20">
+  <database-model serializer="dbm" dbms="MARIADB" family-id="MARIADB" format-version="4.21">
     <root id="1">
       <ServerVersion>10.5.9</ServerVersion>
+      <Grants>|root||root||ALTER|G
+|root||root|127.0.0.1|ALTER|G
+|root||root|::1|ALTER|G
+|root||root|desktop-c6rf12i|ALTER|G
+|root||root|localhost|ALTER|G
+|root||root||ALTER ROUTINE|G
+|root||root|127.0.0.1|ALTER ROUTINE|G
+|root||root|::1|ALTER ROUTINE|G
+|root||root|desktop-c6rf12i|ALTER ROUTINE|G
+|root||root|localhost|ALTER ROUTINE|G
+|root||root||BINLOG ADMIN|G
+|root||root|127.0.0.1|BINLOG ADMIN|G
+|root||root|::1|BINLOG ADMIN|G
+|root||root|desktop-c6rf12i|BINLOG ADMIN|G
+|root||root|localhost|BINLOG ADMIN|G
+|root||root||BINLOG MONITOR|G
+|root||root|127.0.0.1|BINLOG MONITOR|G
+|root||root|::1|BINLOG MONITOR|G
+|root||root|desktop-c6rf12i|BINLOG MONITOR|G
+|root||root|localhost|BINLOG MONITOR|G
+|root||root||BINLOG REPLAY|G
+|root||root|127.0.0.1|BINLOG REPLAY|G
+|root||root|::1|BINLOG REPLAY|G
+|root||root|desktop-c6rf12i|BINLOG REPLAY|G
+|root||root|localhost|BINLOG REPLAY|G
+|root||root||CONNECTION ADMIN|G
+|root||root|127.0.0.1|CONNECTION ADMIN|G
+|root||root|::1|CONNECTION ADMIN|G
+|root||root|desktop-c6rf12i|CONNECTION ADMIN|G
+|root||root|localhost|CONNECTION ADMIN|G
+|root||root||CREATE|G
+|root||root|127.0.0.1|CREATE|G
+|root||root|::1|CREATE|G
+|root||root|desktop-c6rf12i|CREATE|G
+|root||root|localhost|CREATE|G
+|root||root||CREATE ROUTINE|G
+|root||root|127.0.0.1|CREATE ROUTINE|G
+|root||root|::1|CREATE ROUTINE|G
+|root||root|desktop-c6rf12i|CREATE ROUTINE|G
+|root||root|localhost|CREATE ROUTINE|G
+|root||root||CREATE TABLESPACE|G
+|root||root|127.0.0.1|CREATE TABLESPACE|G
+|root||root|::1|CREATE TABLESPACE|G
+|root||root|desktop-c6rf12i|CREATE TABLESPACE|G
+|root||root|localhost|CREATE TABLESPACE|G
+|root||root||CREATE TEMPORARY TABLES|G
+|root||root|127.0.0.1|CREATE TEMPORARY TABLES|G
+|root||root|::1|CREATE TEMPORARY TABLES|G
+|root||root|desktop-c6rf12i|CREATE TEMPORARY TABLES|G
+|root||root|localhost|CREATE TEMPORARY TABLES|G
+|root||root||CREATE USER|G
+|root||root|127.0.0.1|CREATE USER|G
+|root||root|::1|CREATE USER|G
+|root||root|desktop-c6rf12i|CREATE USER|G
+|root||root|localhost|CREATE USER|G
+|root||root||CREATE VIEW|G
+|root||root|127.0.0.1|CREATE VIEW|G
+|root||root|::1|CREATE VIEW|G
+|root||root|desktop-c6rf12i|CREATE VIEW|G
+|root||root|localhost|CREATE VIEW|G
+|root||root||DELETE|G
+|root||root|127.0.0.1|DELETE|G
+|root||root|::1|DELETE|G
+|root||root|desktop-c6rf12i|DELETE|G
+|root||root|localhost|DELETE|G
+|root||root||DELETE HISTORY|G
+|root||root|127.0.0.1|DELETE HISTORY|G
+|root||root|::1|DELETE HISTORY|G
+|root||root|desktop-c6rf12i|DELETE HISTORY|G
+|root||root|localhost|DELETE HISTORY|G
+|root||root||DROP|G
+|root||root|127.0.0.1|DROP|G
+|root||root|::1|DROP|G
+|root||root|desktop-c6rf12i|DROP|G
+|root||root|localhost|DROP|G
+|root||root||EVENT|G
+|root||root|127.0.0.1|EVENT|G
+|root||root|::1|EVENT|G
+|root||root|desktop-c6rf12i|EVENT|G
+|root||root|localhost|EVENT|G
+|root||root||EXECUTE|G
+|root||root|127.0.0.1|EXECUTE|G
+|root||root|::1|EXECUTE|G
+|root||root|desktop-c6rf12i|EXECUTE|G
+|root||root|localhost|EXECUTE|G
+|root||root||FEDERATED ADMIN|G
+|root||root|127.0.0.1|FEDERATED ADMIN|G
+|root||root|::1|FEDERATED ADMIN|G
+|root||root|desktop-c6rf12i|FEDERATED ADMIN|G
+|root||root|localhost|FEDERATED ADMIN|G
+|root||root||FILE|G
+|root||root|127.0.0.1|FILE|G
+|root||root|::1|FILE|G
+|root||root|desktop-c6rf12i|FILE|G
+|root||root|localhost|FILE|G
+|root||root||INDEX|G
+|root||root|127.0.0.1|INDEX|G
+|root||root|::1|INDEX|G
+|root||root|desktop-c6rf12i|INDEX|G
+|root||root|localhost|INDEX|G
+|root||root||INSERT|G
+|root||root|127.0.0.1|INSERT|G
+|root||root|::1|INSERT|G
+|root||root|desktop-c6rf12i|INSERT|G
+|root||root|localhost|INSERT|G
+|root||root||LOCK TABLES|G
+|root||root|127.0.0.1|LOCK TABLES|G
+|root||root|::1|LOCK TABLES|G
+|root||root|desktop-c6rf12i|LOCK TABLES|G
+|root||root|localhost|LOCK TABLES|G
+|root||root||PROCESS|G
+|root||root|127.0.0.1|PROCESS|G
+|root||root|::1|PROCESS|G
+|root||root|desktop-c6rf12i|PROCESS|G
+|root||root|localhost|PROCESS|G
+|root||root||READ_ONLY ADMIN|G
+|root||root|127.0.0.1|READ_ONLY ADMIN|G
+|root||root|::1|READ_ONLY ADMIN|G
+|root||root|desktop-c6rf12i|READ_ONLY ADMIN|G
+|root||root|localhost|READ_ONLY ADMIN|G
+|root||root||REFERENCES|G
+|root||root|127.0.0.1|REFERENCES|G
+|root||root|::1|REFERENCES|G
+|root||root|desktop-c6rf12i|REFERENCES|G
+|root||root|localhost|REFERENCES|G
+|root||root||RELOAD|G
+|root||root|127.0.0.1|RELOAD|G
+|root||root|::1|RELOAD|G
+|root||root|desktop-c6rf12i|RELOAD|G
+|root||root|localhost|RELOAD|G
+|root||root||REPLICATION MASTER ADMIN|G
+|root||root|127.0.0.1|REPLICATION MASTER ADMIN|G
+|root||root|::1|REPLICATION MASTER ADMIN|G
+|root||root|desktop-c6rf12i|REPLICATION MASTER ADMIN|G
+|root||root|localhost|REPLICATION MASTER ADMIN|G
+|root||root||REPLICATION SLAVE|G
+|root||root|127.0.0.1|REPLICATION SLAVE|G
+|root||root|::1|REPLICATION SLAVE|G
+|root||root|desktop-c6rf12i|REPLICATION SLAVE|G
+|root||root|localhost|REPLICATION SLAVE|G
+|root||root||REPLICATION SLAVE ADMIN|G
+|root||root|127.0.0.1|REPLICATION SLAVE ADMIN|G
+|root||root|::1|REPLICATION SLAVE ADMIN|G
+|root||root|desktop-c6rf12i|REPLICATION SLAVE ADMIN|G
+|root||root|localhost|REPLICATION SLAVE ADMIN|G
+|root||root||SELECT|G
+|root||root|127.0.0.1|SELECT|G
+|root||root|::1|SELECT|G
+|root||root|desktop-c6rf12i|SELECT|G
+|root||root|localhost|SELECT|G
+|root||root||SET USER|G
+|root||root|127.0.0.1|SET USER|G
+|root||root|::1|SET USER|G
+|root||root|desktop-c6rf12i|SET USER|G
+|root||root|localhost|SET USER|G
+|root||root||SHOW DATABASES|G
+|root||root|127.0.0.1|SHOW DATABASES|G
+|root||root|::1|SHOW DATABASES|G
+|root||root|desktop-c6rf12i|SHOW DATABASES|G
+|root||root|localhost|SHOW DATABASES|G
+|root||root||SHOW VIEW|G
+|root||root|127.0.0.1|SHOW VIEW|G
+|root||root|::1|SHOW VIEW|G
+|root||root|desktop-c6rf12i|SHOW VIEW|G
+|root||root|localhost|SHOW VIEW|G
+|root||root||SHUTDOWN|G
+|root||root|127.0.0.1|SHUTDOWN|G
+|root||root|::1|SHUTDOWN|G
+|root||root|desktop-c6rf12i|SHUTDOWN|G
+|root||root|localhost|SHUTDOWN|G
+|root||root||SLAVE MONITOR|G
+|root||root|127.0.0.1|SLAVE MONITOR|G
+|root||root|::1|SLAVE MONITOR|G
+|root||root|desktop-c6rf12i|SLAVE MONITOR|G
+|root||root|localhost|SLAVE MONITOR|G
+|root||root||SUPER|G
+|root||root|127.0.0.1|SUPER|G
+|root||root|::1|SUPER|G
+|root||root|desktop-c6rf12i|SUPER|G
+|root||root|localhost|SUPER|G
+|root||root||TRIGGER|G
+|root||root|127.0.0.1|TRIGGER|G
+|root||root|::1|TRIGGER|G
+|root||root|desktop-c6rf12i|TRIGGER|G
+|root||root|localhost|TRIGGER|G
+|root||root||UPDATE|G
+|root||root|127.0.0.1|UPDATE|G
+|root||root|::1|UPDATE|G
+|root||root|desktop-c6rf12i|UPDATE|G
+|root||root|localhost|UPDATE|G
+|root||root||grant option|G
+|root||root|127.0.0.1|grant option|G
+|root||root|::1|grant option|G
+|root||root|desktop-c6rf12i|grant option|G
+|root||root|localhost|grant option|G
+charitydb|schema||app1|localhost|ALTER|G
+charitydb|schema||app1|localhost|ALTER ROUTINE|G
+charitydb|schema||app1|localhost|CREATE|G
+charitydb|schema||app1|localhost|CREATE ROUTINE|G
+charitydb|schema||app1|localhost|CREATE TEMPORARY TABLES|G
+charitydb|schema||app1|localhost|CREATE VIEW|G
+charitydb|schema||app1|localhost|DELETE|G
+charitydb|schema||app1|localhost|DELETE HISTORY|G
+charitydb|schema||app1|localhost|DROP|G
+charitydb|schema||app1|localhost|EVENT|G
+charitydb|schema||app1|localhost|EXECUTE|G
+charitydb|schema||app1|localhost|INDEX|G
+charitydb|schema||app1|localhost|INSERT|G
+charitydb|schema||app1|localhost|LOCK TABLES|G
+charitydb|schema||app1|localhost|REFERENCES|G
+charitydb|schema||app1|localhost|SELECT|G
+charitydb|schema||app1|localhost|SHOW VIEW|G
+charitydb|schema||app1|localhost|TRIGGER|G
+charitydb|schema||app1|localhost|UPDATE|G
+test|schema||&apos;&apos;||ALTER|G
+test|schema||&apos;&apos;||CREATE|G
+test|schema||&apos;&apos;||CREATE ROUTINE|G
+test|schema||&apos;&apos;||CREATE TEMPORARY TABLES|G
+test|schema||&apos;&apos;||CREATE VIEW|G
+test|schema||&apos;&apos;||DELETE|G
+test|schema||&apos;&apos;||DELETE HISTORY|G
+test|schema||&apos;&apos;||DROP|G
+test|schema||&apos;&apos;||EVENT|G
+test|schema||&apos;&apos;||INDEX|G
+test|schema||&apos;&apos;||INSERT|G
+test|schema||&apos;&apos;||LOCK TABLES|G
+test|schema||&apos;&apos;||REFERENCES|G
+test|schema||&apos;&apos;||SELECT|G
+test|schema||&apos;&apos;||SHOW VIEW|G
+test|schema||&apos;&apos;||TRIGGER|G
+test|schema||&apos;&apos;||UPDATE|G
+test\\_%|schema||&apos;&apos;||ALTER|G
+test\\_%|schema||&apos;&apos;||CREATE|G
+test\\_%|schema||&apos;&apos;||CREATE ROUTINE|G
+test\\_%|schema||&apos;&apos;||CREATE TEMPORARY TABLES|G
+test\\_%|schema||&apos;&apos;||CREATE VIEW|G
+test\\_%|schema||&apos;&apos;||DELETE|G
+test\\_%|schema||&apos;&apos;||DELETE HISTORY|G
+test\\_%|schema||&apos;&apos;||DROP|G
+test\\_%|schema||&apos;&apos;||EVENT|G
+test\\_%|schema||&apos;&apos;||INDEX|G
+test\\_%|schema||&apos;&apos;||INSERT|G
+test\\_%|schema||&apos;&apos;||LOCK TABLES|G
+test\\_%|schema||&apos;&apos;||REFERENCES|G
+test\\_%|schema||&apos;&apos;||SELECT|G
+test\\_%|schema||&apos;&apos;||SHOW VIEW|G
+test\\_%|schema||&apos;&apos;||TRIGGER|G
+test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <DefaultEngine>InnoDB</DefaultEngine>
       <DefaultCasing>lower/lower</DefaultCasing>
     </root>
@@ -1030,38 +1278,22 @@
     </collation>
     <user id="329" parent="1" name="app1">
       <Host>localhost</Host>
-      <ObjectGrants>ALL PRIVILEGES|charitydb
-</ObjectGrants>
     </user>
     <user id="330" parent="1" name="mariadb.sys">
       <Host>localhost</Host>
-      <ObjectGrants>SELECT,DELETE|mysql.global_priv
-</ObjectGrants>
     </user>
-    <user id="331" parent="1" name="root">
-      <Host>%</Host>
-      <ObjectGrants>ALL PRIVILEGES!
-</ObjectGrants>
-    </user>
+    <user id="331" parent="1" name="root"/>
     <user id="332" parent="1" name="root">
       <Host>127.0.0.1</Host>
-      <ObjectGrants>ALL PRIVILEGES!
-</ObjectGrants>
     </user>
     <user id="333" parent="1" name="root">
       <Host>::1</Host>
-      <ObjectGrants>ALL PRIVILEGES!
-</ObjectGrants>
     </user>
     <user id="334" parent="1" name="root">
       <Host>desktop-c6rf12i</Host>
-      <ObjectGrants>ALL PRIVILEGES!
-</ObjectGrants>
     </user>
     <user id="335" parent="1" name="root">
       <Host>localhost</Host>
-      <ObjectGrants>ALL PRIVILEGES!
-</ObjectGrants>
     </user>
     <table id="336" parent="2" name="category"/>
     <table id="337" parent="2" name="charity"/>

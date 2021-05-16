@@ -24,10 +24,10 @@
 
 - Because of FK relationships, we will also have to
     - Create a new Category to INSERT into the Category table
-      
+
 - We will have to populate the charity-category relationship table
 - We will have to populate the charity_program relationship table
-- The services rendered by Zisize are :
+- The services (programs) provided by Zisize are :
     - Residential facility
     - Social Work offices for psycho- social services
     - Protective workshops
@@ -40,4 +40,15 @@
         - https://en.wikipedia.org/wiki/ACID
 
     - Therefore, we need to enable transactional capability with rollbacks.
-   
+
+5. Before we run the Main Method in the TransactionMain class we need to prepare the database, this entails doing the
+   following with the help of our previously created SQL SCRIPTS in the MariaDBConnect project resources:
+    - Run the 2-CREATE-CHARITY-TABLE.SQL script
+    - Run the 2A-CREATE-CATEGORY.SQL script
+    - Run the 2AB-INSERT-CATEGORY.SQL script
+    - Run part of the 2AB-CREATE-CHARITY-CATEGORY.SQL script in such a way that the Foreign Keys won't be created. This
+      will allow us to test run our TransactionMain main method to insert the Charity, Category and Charity_Category
+      relationship table without violating the FK constraint.
+    - Left to do as a self-guided exercise is to populate the Programs table, and the Charity_Programs table within the
+      Transaction code.
+    - Ensure that AutoIncrement for PK is reset to zero

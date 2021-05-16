@@ -102,8 +102,8 @@ public class TransactionMain {
       }
 
       // When charity table insert succeeds, insert a new Category in the category table and
-      // add/insert the
-      // association between the Charity and the Category in the Charity_Category Table
+      // add/insert the association between the Charity and the Category in the Charity_Category
+      // Table
 
       if (rowsAffected == 1) {
         String insertCategory = "INSERT INTO CATEGORY(CATEGORY_NAME) VALUES(?)";
@@ -138,7 +138,11 @@ public class TransactionMain {
             if (charityCategoryResultSet.next()) {
               int charityCategoryID = charityCategoryResultSet.getInt(0);
             }
+          } else {
+            conn.rollback();
           }
+        } else {
+          conn.rollback();
         }
 
         conn.commit();
@@ -175,6 +179,10 @@ public class TransactionMain {
 
         if (pstmtInsertCharityCategory != null) {
           pstmtInsertCharityCategory.close();
+        }
+
+        if (conn != null) {
+          conn.close();
         }
 
       } catch (SQLException throwables) {
