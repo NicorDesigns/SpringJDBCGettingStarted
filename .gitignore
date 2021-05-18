@@ -112,3 +112,4 @@ hs_err_pid*
 
 # Project exclude paths
 /jdbc1/target/
+/.idea/
