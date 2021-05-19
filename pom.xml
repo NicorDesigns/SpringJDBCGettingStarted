@@ -37,6 +37,7 @@
     <modules>
         <module>MariaDBConnect</module>
         <module>JDBC1</module>
+        <module>JDBC1SpringBeans</module>
         <module>JDBC2</module>
         <module>JDBC2E</module>
         <module>JDBC3</module>
