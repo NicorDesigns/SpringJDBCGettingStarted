@@ -40,8 +40,8 @@
         <module>JDBC1SpringBean</module>
         <module>JDBC2</module>
         <module>JDBC2E</module>
+        <module>JDBC2ESpringBeanConfig</module>
         <module>JDBC3</module>
-
     </modules>
     <packaging>pom</packaging>
     <name>SpringJDBCGettingStarted</name>
