@@ -66,14 +66,12 @@ public class Main {
     // Set execution independent of current thread context classloader (compatibility with exec:java
     // mojo)
     ctx.setParentClassLoader(Main.class.getClassLoader());
-
     System.out.println("configuring app with basedir: " + webContentFolder.getAbsolutePath());
 
     // Declare an alternative location for your "WEB-INF/classes" dir
     // Servlet 3.0 annotation will work
     File additionWebInfClassesFolder = new File(root.getAbsolutePath(), "target/classes");
     WebResourceRoot resources = new StandardRoot(ctx);
-
     WebResourceSet resourceSet;
     if (additionWebInfClassesFolder.exists()) {
       resourceSet =
@@ -83,6 +81,7 @@ public class Main {
           "loading WEB-INF resources from as '"
               + additionWebInfClassesFolder.getAbsolutePath()
               + "'");
+
     } else {
       resourceSet = new EmptyResourceSet(resources);
     }

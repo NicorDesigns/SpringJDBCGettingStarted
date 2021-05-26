@@ -3,15 +3,18 @@
          version="2.5">
     <display-name>JSP Example Application</display-name>
 
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
     <servlet>
         <servlet-name>jndiservlet</servlet-name>
         <servlet-class>com.nicordesigns.HelloServlet</servlet-class>
-
     </servlet>
 
     <servlet-mapping>
         <servlet-name>jndiservlet</servlet-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/hello</url-pattern>
     </servlet-mapping>
 
     <resource-ref>

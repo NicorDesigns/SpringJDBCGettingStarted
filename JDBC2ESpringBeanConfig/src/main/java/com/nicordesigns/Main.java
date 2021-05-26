@@ -7,7 +7,6 @@ import org.apache.catalina.startup.Tomcat;
 import org.apache.catalina.webresources.DirResourceSet;
 import org.apache.catalina.webresources.EmptyResourceSet;
 import org.apache.catalina.webresources.StandardRoot;
-import org.apache.tomcat.util.descriptor.web.ContextResource;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -61,17 +60,15 @@ public class Main {
     if (!webContentFolder.exists()) {
       webContentFolder = Files.createTempDirectory("default-doc-base").toFile();
     }
-    StandardContext ctx =
+    StandardContext standardContext =
         (StandardContext) tomcat.addWebapp("", webContentFolder.getAbsolutePath());
     // Set execution independent of current thread context classloader
     // (compatibility with exec:java mojo)
-    ctx.setParentClassLoader(Main.class.getClassLoader());
+    standardContext.setParentClassLoader(Main.class.getClassLoader());
     System.out.println("configuring app with basedir: " + webContentFolder.getAbsolutePath());
 
-    // Declare an alternative location for your "WEB-INF/classes" dir
-    // Servlet 3.0 annotation will work
     File additionWebInfClassesFolder = new File(root.getAbsolutePath(), "target/classes");
-    WebResourceRoot resources = new StandardRoot(ctx);
+    WebResourceRoot resources = new StandardRoot(standardContext);
     WebResourceSet resourceSet;
     if (additionWebInfClassesFolder.exists()) {
       resourceSet =
@@ -85,24 +82,23 @@ public class Main {
     } else {
       resourceSet = new EmptyResourceSet(resources);
     }
-
     resources.addPreResources(resourceSet);
-    ctx.setResources(resources);
+    standardContext.setResources(resources);
 
-    tomcat.enableNaming();
-
-    ContextResource mariaDBSource = new ContextResource();
-    mariaDBSource.setName("jdbc/charityDB");
-    mariaDBSource.setAuth("Container");
-    mariaDBSource.setType("javax.sql.DataSource");
-    mariaDBSource.setProperty("driverClassName", "org.mariadb.jdbc.Driver");
-    mariaDBSource.setProperty(
-        "url", "jdbc:mariadb://localhost:3306/charityDB?user=root&password=secret");
-    mariaDBSource.setProperty("factory", "org.apache.tomcat.jdbc.pool.DataSourceFactory");
-    mariaDBSource.setProperty("user", "root");
-    mariaDBSource.setProperty("password", "secret");
-
-    ctx.getNamingResources().addResource(mariaDBSource);
+    //    tomcat.enableNaming();
+    //
+    //    ContextResource mariaDBSource = new ContextResource();
+    //    mariaDBSource.setName("jdbc/charityDB");
+    //    mariaDBSource.setAuth("Container");
+    //    mariaDBSource.setType("javax.sql.DataSource");
+    //    mariaDBSource.setProperty("driverClassName", "org.mariadb.jdbc.Driver");
+    //    mariaDBSource.setProperty(
+    //        "url", "jdbc:mariadb://localhost:3306/charityDB?user=root&password=secret");
+    //    mariaDBSource.setProperty("factory", "org.apache.tomcat.jdbc.pool.DataSourceFactory");
+    //    mariaDBSource.setProperty("user", "root");
+    //    mariaDBSource.setProperty("password", "secret");
+    //
+    //    standardContext.getNamingResources().addResource(mariaDBSource);
 
     tomcat.start();
     tomcat.getServer().await();
