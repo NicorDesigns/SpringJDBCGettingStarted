@@ -85,20 +85,7 @@ public class Main {
     resources.addPreResources(resourceSet);
     standardContext.setResources(resources);
 
-    //    tomcat.enableNaming();
-    //
-    //    ContextResource mariaDBSource = new ContextResource();
-    //    mariaDBSource.setName("jdbc/charityDB");
-    //    mariaDBSource.setAuth("Container");
-    //    mariaDBSource.setType("javax.sql.DataSource");
-    //    mariaDBSource.setProperty("driverClassName", "org.mariadb.jdbc.Driver");
-    //    mariaDBSource.setProperty(
-    //        "url", "jdbc:mariadb://localhost:3306/charityDB?user=root&password=secret");
-    //    mariaDBSource.setProperty("factory", "org.apache.tomcat.jdbc.pool.DataSourceFactory");
-    //    mariaDBSource.setProperty("user", "root");
-    //    mariaDBSource.setProperty("password", "secret");
-    //
-    //    standardContext.getNamingResources().addResource(mariaDBSource);
+    tomcat.enableNaming();
 
     tomcat.start();
     tomcat.getServer().await();

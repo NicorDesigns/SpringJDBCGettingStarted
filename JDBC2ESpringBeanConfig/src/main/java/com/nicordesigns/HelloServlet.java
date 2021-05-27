@@ -10,7 +10,10 @@ public class HelloServlet extends HttpServlet {
 
   @Override
   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-    String catalogName = DatabaseUtil.getCatalogName();
+    DatabaseUtil databaseUtil =
+        new DatabaseUtil("root", "secret", "mariadb", "localhost", "3306", "charityDB");
+    String catalogName;
+    catalogName = databaseUtil.getCatalogName();
     ServletOutputStream out = resp.getOutputStream();
     out.write("servlet says hello - ".getBytes());
     out.write(catalogName.getBytes());
