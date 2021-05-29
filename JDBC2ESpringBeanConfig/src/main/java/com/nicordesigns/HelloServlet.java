@@ -27,8 +27,8 @@ public class HelloServlet extends HttpServlet {
     catalogName = databaseUtil.getCatalogName();
     ServletOutputStream out = resp.getOutputStream();
     out.write("servlet says hello - ".getBytes());
+    out.write(System.lineSeparator().getBytes());
     out.write(catalogName.getBytes());
-    out.write("/n".getBytes());
     out.flush();
     out.close();
   }
