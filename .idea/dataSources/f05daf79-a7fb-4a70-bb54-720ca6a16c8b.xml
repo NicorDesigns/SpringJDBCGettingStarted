@@ -1238,276 +1238,320 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
     </user>
     <table id="335" parent="2" name="category"/>
     <table id="336" parent="2" name="charity"/>
-    <table id="337" parent="2" name="charity_associate_address"/>
-    <table id="338" parent="2" name="charity_associate_email"/>
-    <table id="339" parent="2" name="charity_associate_phone"/>
-    <table id="340" parent="2" name="charity_associate_types"/>
-    <table id="341" parent="2" name="charity_category"/>
-    <table id="342" parent="2" name="charity_program"/>
-    <table id="343" parent="2" name="program"/>
-    <column id="344" parent="335" name="CATEGORY_ID">
+    <table id="337" parent="2" name="charity_associate"/>
+    <table id="338" parent="2" name="charity_associate_address"/>
+    <table id="339" parent="2" name="charity_associate_email"/>
+    <table id="340" parent="2" name="charity_associate_phone"/>
+    <table id="341" parent="2" name="charity_associate_types"/>
+    <table id="342" parent="2" name="charity_category"/>
+    <table id="343" parent="2" name="charity_program"/>
+    <table id="344" parent="2" name="program"/>
+    <column id="345" parent="335" name="CATEGORY_ID">
       <Position>1</Position>
       <DataType>mediumint(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="345" parent="335" name="CATEGORY_NAME">
+    <column id="346" parent="335" name="CATEGORY_NAME">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
     </column>
-    <index id="346" parent="335" name="IDX_CATEGORY">
+    <index id="347" parent="335" name="IDX_CATEGORY">
       <ColNames>CATEGORY_ID</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="347" parent="335" name="PRIMARY">
+    <key id="348" parent="335" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>CATEGORY_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="348" parent="335" name="IDX_CATEGORY">
+    <key id="349" parent="335" name="IDX_CATEGORY">
       <ColNames>CATEGORY_ID</ColNames>
       <UnderlyingIndexName>IDX_CATEGORY</UnderlyingIndexName>
     </key>
-    <column id="349" parent="336" name="CHARITY_ID">
+    <column id="350" parent="336" name="CHARITY_ID">
       <Position>1</Position>
       <DataType>mediumint(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="350" parent="336" name="CHARITY_TAX_ID">
+    <column id="351" parent="336" name="CHARITY_TAX_ID">
       <Position>2</Position>
       <DataType>varchar(250)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="351" parent="336" name="CHARITY_NAME">
+    <column id="352" parent="336" name="CHARITY_NAME">
       <Position>3</Position>
       <DataType>varchar(250)|0s</DataType>
     </column>
-    <column id="352" parent="336" name="CHARITY_MISSION">
+    <column id="353" parent="336" name="CHARITY_MISSION">
       <Position>4</Position>
       <DataType>varchar(250)|0s</DataType>
     </column>
-    <column id="353" parent="336" name="CHARITY_WEB_ADDRESS">
+    <column id="354" parent="336" name="CHARITY_WEB_ADDRESS">
       <Position>5</Position>
       <DataType>varchar(250)|0s</DataType>
     </column>
-    <column id="354" parent="336" name="CHARITY_FACEBOOK_ADDRESS">
+    <column id="355" parent="336" name="CHARITY_FACEBOOK_ADDRESS">
       <Position>6</Position>
       <DataType>varchar(250)|0s</DataType>
     </column>
-    <column id="355" parent="336" name="CHARITY_TWITTER_ADDRESS">
+    <column id="356" parent="336" name="CHARITY_TWITTER_ADDRESS">
       <Position>7</Position>
       <DataType>varchar(250)|0s</DataType>
     </column>
-    <index id="356" parent="336" name="PK_CHARITY">
+    <index id="357" parent="336" name="PK_CHARITY">
       <ColNames>CHARITY_ID</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="357" parent="336" name="CHARITY_TAX_ID">
+    <index id="358" parent="336" name="CHARITY_TAX_ID">
       <ColNames>CHARITY_TAX_ID</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="358" parent="336" name="PRIMARY">
+    <key id="359" parent="336" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>CHARITY_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="359" parent="336" name="PK_CHARITY">
+    <key id="360" parent="336" name="PK_CHARITY">
       <ColNames>CHARITY_ID</ColNames>
       <UnderlyingIndexName>PK_CHARITY</UnderlyingIndexName>
     </key>
-    <key id="360" parent="336" name="CHARITY_TAX_ID">
+    <key id="361" parent="336" name="CHARITY_TAX_ID">
       <ColNames>CHARITY_TAX_ID</ColNames>
       <UnderlyingIndexName>CHARITY_TAX_ID</UnderlyingIndexName>
     </key>
-    <column id="361" parent="337" name="CHARITY_ASSOCIATE_ADDRESS_ID">
+    <column id="362" parent="337" name="CHARITY_ASSOCIATE_ID">
       <Position>1</Position>
       <DataType>mediumint(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="362" parent="337" name="CHARITY_ASSOCIATE_ID">
+    <column id="363" parent="337" name="CHARITY_ID">
+      <Position>2</Position>
+      <DataType>mediumint(9)|0s</DataType>
+    </column>
+    <column id="364" parent="337" name="CHARITY_ASSOCIATE_TYPE">
+      <Position>3</Position>
+      <DataType>mediumint(9)|0s</DataType>
+    </column>
+    <column id="365" parent="337" name="CHARITY_ASSOCIATE_NAME">
+      <Position>4</Position>
+      <DataType>varchar(80)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="366" parent="337" name="CHARITY_ASSOCIATE_SURNAME">
+      <Position>5</Position>
+      <DataType>varchar(80)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="367" parent="337" name="CHARITY_ASSOCIATE_DOB">
+      <Position>6</Position>
+      <DataType>date|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="368" parent="337" name="CHARITY_ASSOCIATE_PK">
+      <ColNames>CHARITY_ASSOCIATE_ID</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="369" parent="337" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>CHARITY_ASSOCIATE_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="370" parent="337" name="CHARITY_ASSOCIATE_PK">
+      <ColNames>CHARITY_ASSOCIATE_ID</ColNames>
+      <UnderlyingIndexName>CHARITY_ASSOCIATE_PK</UnderlyingIndexName>
+    </key>
+    <column id="371" parent="338" name="CHARITY_ASSOCIATE_ADDRESS_ID">
+      <Position>1</Position>
+      <DataType>mediumint(9)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="372" parent="338" name="CHARITY_ASSOCIATE_ID">
       <Position>2</Position>
       <DataType>mediumint(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="363" parent="337" name="CHARITY_ASSOCIATE_CHARITY_ASSOCIATE_ADDRESS_LINE1">
+    <column id="373" parent="338" name="CHARITY_ASSOCIATE_CHARITY_ASSOCIATE_ADDRESS_LINE1">
       <Position>3</Position>
       <DataType>varchar(60)|0s</DataType>
     </column>
-    <column id="364" parent="337" name="CHARITY_ASSOCIATE_CHARITY_ASSOCIATE_ADDRESS_LINE2">
+    <column id="374" parent="338" name="CHARITY_ASSOCIATE_CHARITY_ASSOCIATE_ADDRESS_LINE2">
       <Position>4</Position>
       <DataType>varchar(60)|0s</DataType>
     </column>
-    <column id="365" parent="337" name="CHARITY_ASSOCIATE_CITY">
+    <column id="375" parent="338" name="CHARITY_ASSOCIATE_CITY">
       <Position>5</Position>
       <DataType>varchar(60)|0s</DataType>
     </column>
-    <column id="366" parent="337" name="CHARITY_ASSOCIATE_POSTAL_CODE">
+    <column id="376" parent="338" name="CHARITY_ASSOCIATE_POSTAL_CODE">
       <Position>6</Position>
       <DataType>varchar(10)|0s</DataType>
     </column>
-    <column id="367" parent="337" name="CHARITY_ASSOCIATE_CHARITY_ASSOCIATE_ADDRESS_START_DATE">
+    <column id="377" parent="338" name="CHARITY_ASSOCIATE_CHARITY_ASSOCIATE_ADDRESS_START_DATE">
       <Position>7</Position>
       <DataType>date|0s</DataType>
     </column>
-    <column id="368" parent="337" name="CHARITY_ASSOCIATE_CHARITY_ASSOCIATE_ADDRESS_END_DATE">
+    <column id="378" parent="338" name="CHARITY_ASSOCIATE_CHARITY_ASSOCIATE_ADDRESS_END_DATE">
       <Position>8</Position>
       <DataType>date|0s</DataType>
     </column>
-    <index id="369" parent="337" name="CHARITY_ASSOCIATE_ADDRESS_PK">
+    <index id="379" parent="338" name="CHARITY_ASSOCIATE_ADDRESS_PK">
       <ColNames>CHARITY_ASSOCIATE_ADDRESS_ID</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="370" parent="337" name="PRIMARY">
+    <key id="380" parent="338" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>CHARITY_ASSOCIATE_ADDRESS_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="371" parent="337" name="CHARITY_ASSOCIATE_ADDRESS_PK">
+    <key id="381" parent="338" name="CHARITY_ASSOCIATE_ADDRESS_PK">
       <ColNames>CHARITY_ASSOCIATE_ADDRESS_ID</ColNames>
       <UnderlyingIndexName>CHARITY_ASSOCIATE_ADDRESS_PK</UnderlyingIndexName>
     </key>
-    <column id="372" parent="338" name="CHARITY_ASSOCIATE_EMAIL_ID">
+    <column id="382" parent="339" name="CHARITY_ASSOCIATE_EMAIL_ID">
       <Position>1</Position>
       <DataType>mediumint(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="373" parent="338" name="CHARITY_ASSOCIATE_ID">
+    <column id="383" parent="339" name="CHARITY_ASSOCIATE_ID">
       <Position>2</Position>
       <DataType>mediumint(9)|0s</DataType>
     </column>
-    <column id="374" parent="338" name="CHARITY_ASSOCIATE_EMAIL_PRIORITY">
+    <column id="384" parent="339" name="CHARITY_ASSOCIATE_EMAIL_PRIORITY">
       <Position>3</Position>
       <DataType>mediumint(9)|0s</DataType>
     </column>
-    <column id="375" parent="338" name="CHARITY_ASSOCIATE_EMAIL_EMAIL">
+    <column id="385" parent="339" name="CHARITY_ASSOCIATE_EMAIL_EMAIL">
       <Position>4</Position>
       <DataType>varchar(250)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="376" parent="338" name="CHARITY_ASSOCIATE_EMAIL_PK">
+    <index id="386" parent="339" name="CHARITY_ASSOCIATE_EMAIL_PK">
       <ColNames>CHARITY_ASSOCIATE_EMAIL_ID</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="377" parent="338" name="PRIMARY">
+    <key id="387" parent="339" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>CHARITY_ASSOCIATE_EMAIL_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="378" parent="338" name="CHARITY_ASSOCIATE_EMAIL_PK">
+    <key id="388" parent="339" name="CHARITY_ASSOCIATE_EMAIL_PK">
       <ColNames>CHARITY_ASSOCIATE_EMAIL_ID</ColNames>
       <UnderlyingIndexName>CHARITY_ASSOCIATE_EMAIL_PK</UnderlyingIndexName>
     </key>
-    <column id="379" parent="339" name="CHARITY_ASSOCIATE_PHONE_ID">
+    <column id="389" parent="340" name="CHARITY_ASSOCIATE_PHONE_ID">
       <Position>1</Position>
       <DataType>mediumint(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="380" parent="339" name="CHARITY_ASSOCIATE_ID">
+    <column id="390" parent="340" name="CHARITY_ASSOCIATE_ID">
       <Position>2</Position>
       <DataType>mediumint(9)|0s</DataType>
     </column>
-    <column id="381" parent="339" name="CHARITY_ASSOCIATE_PHONE_PRIORITY">
+    <column id="391" parent="340" name="CHARITY_ASSOCIATE_PHONE_PRIORITY">
       <Position>3</Position>
       <DataType>mediumint(9)|0s</DataType>
     </column>
-    <column id="382" parent="339" name="CHARITY_ASSOCIATE_PHONE_CELLPHONE">
+    <column id="392" parent="340" name="CHARITY_ASSOCIATE_PHONE_CELLPHONE">
       <Position>4</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="383" parent="339" name="CHARITY_ASSOCIATE_PHONE_PK">
+    <index id="393" parent="340" name="CHARITY_ASSOCIATE_PHONE_PK">
       <ColNames>CHARITY_ASSOCIATE_PHONE_ID</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="384" parent="339" name="PRIMARY">
+    <key id="394" parent="340" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>CHARITY_ASSOCIATE_PHONE_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="385" parent="339" name="CHARITY_ASSOCIATE_PHONE_PK">
+    <key id="395" parent="340" name="CHARITY_ASSOCIATE_PHONE_PK">
       <ColNames>CHARITY_ASSOCIATE_PHONE_ID</ColNames>
       <UnderlyingIndexName>CHARITY_ASSOCIATE_PHONE_PK</UnderlyingIndexName>
     </key>
-    <column id="386" parent="340" name="CHARITY_ASSOCIATE_TYPE_ID">
+    <column id="396" parent="341" name="CHARITY_ASSOCIATE_TYPE_ID">
       <Position>1</Position>
       <DataType>mediumint(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="387" parent="340" name="CHARITY_ASSOCIATE_ID">
+    <column id="397" parent="341" name="CHARITY_ASSOCIATE_ID">
       <Position>2</Position>
       <DataType>mediumint(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="388" parent="340" name="CHARITY_ASSOCIATE_TYPE_NAME">
+    <column id="398" parent="341" name="CHARITY_ASSOCIATE_TYPE_NAME">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
     </column>
-    <index id="389" parent="340" name="IDX_CHARITY_ASSOCIATE_TYPE">
+    <index id="399" parent="341" name="IDX_CHARITY_ASSOCIATE_TYPE">
       <ColNames>CHARITY_ASSOCIATE_TYPE_ID</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="390" parent="340" name="PRIMARY">
+    <key id="400" parent="341" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>CHARITY_ASSOCIATE_TYPE_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="391" parent="340" name="IDX_CHARITY_ASSOCIATE_TYPE">
+    <key id="401" parent="341" name="IDX_CHARITY_ASSOCIATE_TYPE">
       <ColNames>CHARITY_ASSOCIATE_TYPE_ID</ColNames>
       <UnderlyingIndexName>IDX_CHARITY_ASSOCIATE_TYPE</UnderlyingIndexName>
     </key>
-    <column id="392" parent="341" name="CHARITY_ID">
+    <column id="402" parent="342" name="CHARITY_ID">
       <Position>1</Position>
       <DataType>mediumint(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="393" parent="341" name="CATEGORY_ID">
+    <column id="403" parent="342" name="CATEGORY_ID">
       <Position>2</Position>
       <DataType>mediumint(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="394" parent="342" name="CHARITY_ID">
+    <column id="404" parent="343" name="CHARITY_ID">
       <Position>1</Position>
       <DataType>mediumint(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="395" parent="342" name="PROGRAM_ID">
+    <column id="405" parent="343" name="PROGRAM_ID">
       <Position>2</Position>
       <DataType>mediumint(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="396" parent="343" name="PROGRAM_ID">
+    <column id="406" parent="344" name="PROGRAM_ID">
       <Position>1</Position>
       <DataType>mediumint(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="397" parent="343" name="PROGRAM_DESCRIPTION">
+    <column id="407" parent="344" name="PROGRAM_DESCRIPTION">
       <Position>2</Position>
       <DataType>varchar(250)|0s</DataType>
     </column>
-    <index id="398" parent="343" name="IDX_PROGRAM">
+    <index id="408" parent="344" name="IDX_PROGRAM">
       <ColNames>PROGRAM_ID</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="399" parent="343" name="PRIMARY">
+    <key id="409" parent="344" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>PROGRAM_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="400" parent="343" name="IDX_PROGRAM">
+    <key id="410" parent="344" name="IDX_PROGRAM">
       <ColNames>PROGRAM_ID</ColNames>
       <UnderlyingIndexName>IDX_PROGRAM</UnderlyingIndexName>
     </key>

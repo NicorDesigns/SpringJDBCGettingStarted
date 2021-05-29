@@ -8,9 +8,7 @@ import java.sql.SQLException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-/**
- * Unit test for simple DriverManagerApp.
- */
+/** Unit test for simple DriverManagerApp. */
 public class DriverManagerAppTest {
 
   private final DriverManagerApp driverManagerApp = new DriverManagerApp();
@@ -34,7 +32,5 @@ public class DriverManagerAppTest {
     } catch (SQLException throwable) {
       throwable.printStackTrace();
     }
-
-
   }
 }

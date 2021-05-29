@@ -5,9 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
-/**
- * Hello world!
- */
+/** Hello world! */
 public class DriverManagerApp {
 
   private String userName;
@@ -78,16 +76,16 @@ public class DriverManagerApp {
     if (this.dbms.equals("mariadb")) {
       try {
         conn =
-                DriverManager.getConnection(
-                        "jdbc:"
-                                + this.dbms
-                                + "://"
-                                + this.serverName
-                                + ":"
-                                + this.portNumber
-                                + "/"
-                                + this.dbName,
-                        connectionProps);
+            DriverManager.getConnection(
+                "jdbc:"
+                    + this.dbms
+                    + "://"
+                    + this.serverName
+                    + ":"
+                    + this.portNumber
+                    + "/"
+                    + this.dbName,
+                connectionProps);
       } catch (SQLException throwables) {
         throwables.printStackTrace();
       }
